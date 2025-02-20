@@ -39,28 +39,29 @@ public class TicTacToe
 	public String getWinner()
 	{
 		char[][]mat1 = new char[3][3];
-		String result = "";
+		mat1 = mat;
+		String result= "";
 
 		if(mat1[0][0]== mat1[0][1] && mat1[0][1] == mat1[0][2])
-			result.equals("" + mat1[0][0] +" is the winner horizontally");
+			result="" + mat1[0][0] +" is the winner horizontally";
 		else if(mat1[1][0]== mat1[1][1] && mat1[1][1] == mat1[1][2])
-			result.equals("" + mat1[1][0] +" is the winner horizontally");
+			result="" + mat1[1][0] +" is the winner horizontally";
 		else if(mat1[2][0]== mat1[2][1] && mat1[2][1] == mat1[2][2])
-			result.equals("" + mat1[2][0] +" is the winner horizontally");
+			result="" + mat1[2][0] +" is the winner horizontally";
 		else if(mat1[0][0]== mat1[1][0] && mat1[1][0] == mat1[2][0])
-			result.equals("" + mat1[0][0] +" is the winner verticallly");
+			result="" + mat1[0][0] +" is the winner verticallly";
 		else if(mat1[0][1]== mat1[1][1] && mat1[1][1] == mat1[2][1])
-			result.equals("" + mat1[1][1] +" is the winner verticallly");
+			result="" + mat1[1][1] +" is the winner verticallly";
 		else if(mat1[0][2]== mat1[1][2] && mat1[1][2] == mat1[2][2])
-			result.equals("" + mat1[0][2] +" is the winner verticallly");
+			result="" + mat1[0][2] +" is the winner verticallly";
 		else if(mat1[0][0]== mat1[1][1] && mat1[1][1] == mat1[2][2])
-			result.equals("" + mat1[1][1] +" is the winner diagonally");
+			result="" + mat1[1][1] +" is the winner diagonally";
 		else if(mat1[2][0]== mat1[1][1] && mat1[1][1] == mat1[0][2])
-			result.equals("" + mat1[2][0] +" is the winner diagonally");
+			result="" + mat1[2][0] +" is the winner diagonally";
 		else
-		result.equals("The game is a tie");
-		mat1 = mat;
-		return "" + result;
+			result="The game is a tie";
+
+		return result;
 	}
 
 	public String toString()
@@ -70,10 +71,6 @@ public class TicTacToe
     {
       System.out.println(Arrays.toString(mat[row]));
     }
-
-		
-
-
-		return output+"\n\n";
+		return output;
 	}
 }
